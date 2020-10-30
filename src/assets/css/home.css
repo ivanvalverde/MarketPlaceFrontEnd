@@ -1,0 +1,24 @@
+.homeSectionOne{
+    height: 400px;
+    background-color: #C4C4C4;
+}
+
+.homeSectionTwo{
+    height:150px;
+    background-color: #C4C4C4;
+    margin: 5vw;
+}
+
+.homeSectionsMargin{
+    margin: 12vh 0;
+}
+
+.homeSectionsH2{
+    margin: 6vh 5vw;
+    color: #454545; 
+    font-size: 30px;
+}
+
+.homeSectionsDiv{
+    margin: 3vh 5vw;
+}
