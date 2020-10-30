@@ -1,6 +1,5 @@
 import React from 'react';
-import Card from '../card-home/index';
-import List from '../list-home/index';
+import Card from '../cardHome/index';
 import '../../assets/css/home.css';
 
 const Home = () => {
@@ -8,35 +7,61 @@ const Home = () => {
     const oferta = [["Teste", "Teste"], ["Teste", "Teste"], ["Teste", "Teste"], ["Teste", "Teste"]];
 
     return (
+
         <main className="home">
 
-            <h2 className="m-5">Ofertas do dia</h2>
-
-            <section className="d-flex justify-content-between m-5">
-
-                {oferta.map((elem, index) => {
-                    return (
-                        <Card title={elem[0]} text={elem[1]} />
-                    )
-                })}
+            <section style={{height:"400px", backgroundColor: "#C4C4C4"}}>
 
             </section>
 
-            <section className="d-flex justify-content-around m-5">
+            <section style={{height:"150px", backgroundColor: "#C4C4C4", margin:"5vw"}}>
 
-                <div className="w-25">
-                    <h4 className="my-4">Fornecedores populares</h4>
-                    <List top="Rafael" top2="Laura" top3="Menezes" top4="Bernardo" top5="Shura" />
+            </section>
+
+            <section style={{ margin: "12vh 0" }}>
+
+                <h2 style={{ margin: "6vh 5vw", color: "#454545", fontSize: "30px" }}>Recomendados</h2>
+
+                <div className="d-flex justify-content-between" style={{ margin: "3vh 5vw" }}>
+
+                    {oferta.map((elem, index) => {
+                        return (
+                            <Card title={elem[0]} text={elem[1]} key={index} />
+                        )
+                    })}
+
                 </div>
 
-                <div className="w-25">
-                    <h4 className="my-4">Clientes populares</h4>
-                    <List top="Zidane" top2="Pernil" top3="Adriano" top4="He-man" top5="Toguro" />
+            </section>
+
+            <section style={{ margin: "12vh 0" }}>
+
+                <h2 style={{ margin: "6vh 5vw", color: "#454545", fontSize: "30px" }}>Fornecedores Populares</h2>
+
+                <div className="d-flex justify-content-between" style={{ margin: "3vh 5vw" }}>
+
+                    {oferta.map((elem, index) => {
+                        return (
+                            <Card title={elem[0]} text={elem[1]} key={index} />
+                        )
+                    })}
+
                 </div>
 
-                <div className="w-25">
-                    <h4 className="my-4">Produtos em alta</h4>
-                    <List top="Caramelo" top2="Pernil" top3="FIFA 2008" top4="Mercedez" top5="Bola de Basquete" />
+            </section>
+
+            <section style={{ margin: "12vh 0" }}>
+
+                <h2 style={{ margin: "6vh 5vw", color: "#454545", fontSize: "30px" }}>Clientes Populares</h2>
+
+                <div className="d-flex justify-content-between" style={{ margin: "3vh 5vw" }}>
+
+                    {oferta.map((elem, index) => {
+                        return (
+                            <Card title={elem[0]} text={elem[1]} key={index} />
+                        )
+                    })}
+
                 </div>
 
             </section>
