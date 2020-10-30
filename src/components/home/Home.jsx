@@ -10,19 +10,19 @@ const Home = () => {
 
         <main className="home">
 
-            <section style={{height:"400px", backgroundColor: "#C4C4C4"}}>
+            <section className="homeSectionOne">
 
             </section>
 
-            <section style={{height:"150px", backgroundColor: "#C4C4C4", margin:"5vw"}}>
+            <section className="homeSectionTwo">
 
             </section>
 
-            <section style={{ margin: "12vh 0" }}>
+            <section className="homeSectionsMargin">
 
-                <h2 style={{ margin: "6vh 5vw", color: "#454545", fontSize: "30px" }}>Recomendados</h2>
+                <h2 className="homeSectionsH2">Recomendados</h2>
 
-                <div className="d-flex justify-content-between" style={{ margin: "3vh 5vw" }}>
+                <div className="d-flex justify-content-between homeSectionsDiv">
 
                     {oferta.map((elem, index) => {
                         return (
@@ -34,11 +34,11 @@ const Home = () => {
 
             </section>
 
-            <section style={{ margin: "12vh 0" }}>
+            <section className="homeSectionsMargin">
 
-                <h2 style={{ margin: "6vh 5vw", color: "#454545", fontSize: "30px" }}>Fornecedores Populares</h2>
+                <h2 className="homeSectionsH2">Fornecedores Populares</h2>
 
-                <div className="d-flex justify-content-between" style={{ margin: "3vh 5vw" }}>
+                <div className="d-flex justify-content-between homeSectionsDiv">
 
                     {oferta.map((elem, index) => {
                         return (
@@ -50,11 +50,11 @@ const Home = () => {
 
             </section>
 
-            <section style={{ margin: "12vh 0" }}>
+            <section className="homeSectionsMargin">
 
-                <h2 style={{ margin: "6vh 5vw", color: "#454545", fontSize: "30px" }}>Clientes Populares</h2>
+                <h2 className="homeSectionsH2">Clientes Populares</h2>
 
-                <div className="d-flex justify-content-between" style={{ margin: "3vh 5vw" }}>
+                <div className="d-flex justify-content-between homeSectionsDiv">
 
                     {oferta.map((elem, index) => {
                         return (
