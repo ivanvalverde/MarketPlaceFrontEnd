@@ -1,0 +1,109 @@
+.signin {
+  background-color: red;
+  padding: 5% 10%;
+}
+
+.formClient {
+  background-color: #f7f7f7;
+}
+
+.formClient .formTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.formClient .form-group:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.formClient .form-group input, .formClient .form-group, .formClient .btn{
+  border-radius: 10px;
+}
+
+.formClient .form-check {
+  font-size: 0.9rem;
+}
+
+.formClient .btn {
+  width: 40%;
+  margin: 0 30%;
+}
+
+.formClient .btn ~ * {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .signin {
+    padding: 8% 13%;
+  }
+}
+
+@media (min-width: 768px) {
+  .formClient {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .formClient .inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .formClient .form-control,
+  .formClient .form-group:not(:last-child) {
+    display: flex;
+  }
+
+  .formClient .groupName {
+    width: 55%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupEmail {
+    width: 40%;
+  }
+
+  .formClient .groupAdress {
+    width: 100%;
+  }
+
+  .formClient .groupCEP,
+  .formClient .groupCellphone {
+    width: 47.5%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupCPF,
+  .formClient .groupPassword {
+    width: 47.5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .formClient .groupAdress {
+    width: 65%;
+    margin-right: 5%;
+    
+  }
+
+  .formClient .groupCEP {
+    width: 30%;
+    margin-right: 0;
+  }
+
+  .formClient .groupCPF,
+  .formClient .groupCellphone {
+    width: 32.5%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupPassword {
+    width: 25%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+}
