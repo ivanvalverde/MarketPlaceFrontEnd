@@ -52,7 +52,7 @@
   }
 
   .formClient .form-control,
-  .formClient .form-group:not(:last-child) {
+  .formClient .form-group:not(:last-child):not(:first-child) {
     display: flex;
   }
 
