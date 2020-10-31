@@ -1,0 +1,43 @@
+.signup {
+  padding: 5% 10%;
+}
+
+.formProvider,
+.formClient {
+  background-color: #f7f7f7;
+  max-width: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+
+.formTitle {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0 10%;
+}
+
+.form-group input,
+.form-group,
+.btn {
+  border-radius: 10px;
+}
+
+.btn {
+  width: 40%;
+  margin: 0 30%;
+}
+
+.btn ~ * {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .form-group input,
+  .form-group,
+  .btn {
+    width: 75%;
+    margin: 0 12.5% 1rem;
+  }
+}
