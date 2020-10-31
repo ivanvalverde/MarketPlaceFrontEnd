@@ -1,11 +1,22 @@
 import React from 'react';
 import Card from '../cardHome/index';
+import getProduto from '../../api/produto';
 import '../../assets/css/home.css';
 
 const Home = () => {
 
-    const oferta = [["Teste", "Teste"], ["Teste", "Teste"], ["Teste", "Teste"], ["Teste", "Teste"]];
+    const oferta = [1,2,3,4]
 
+    const [dados, setDados] = React.useState([]);
+
+    React.useEffect(()=>{
+        getProduto().then((data)=>{
+            setDados(data);
+        })
+    },[]);
+
+        console.log(dados)
+        
     return (
 
         <main className="home">
@@ -24,9 +35,9 @@ const Home = () => {
 
                 <div className="d-flex justify-content-between homeSectionsDiv">
 
-                    {oferta.map((elem, index) => {
+                    {dados.map((elem, index) => {
                         return (
-                            <Card title={elem[0]} text={elem[1]} key={index} />
+                            <Card  title={elem.nome} text={elem.descricao} img={elem.foto}  key={index} />
                         )
                     })}
 
@@ -42,7 +53,7 @@ const Home = () => {
 
                     {oferta.map((elem, index) => {
                         return (
-                            <Card title={elem[0]} text={elem[1]} key={index} />
+                            <Card title={elem} text={elem} key={index} />
                         )
                     })}
 
@@ -58,7 +69,7 @@ const Home = () => {
 
                     {oferta.map((elem, index) => {
                         return (
-                            <Card title={elem[0]} text={elem[1]} key={index} />
+                            <Card title={elem} text={elem} key={index} />
                         )
                     })}
 
