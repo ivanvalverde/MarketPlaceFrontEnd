@@ -3,34 +3,36 @@
   padding: 5% 10%;
 }
 
-.formClient {
+.formClient,
+.formProvider {
   background-color: #f7f7f7;
 }
 
-.formClient .formTitle {
+.formTitle {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1rem;
 }
 
-.formClient .form-group:not(:last-child) {
+.form-group:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.formClient .form-group input, .formClient .form-group, .formClient .btn{
+.form-group input,
+.form-group,
+.btn {
   border-radius: 10px;
 }
 
-.formClient .form-check {
+.form-check {
   font-size: 0.9rem;
 }
 
-.formClient .btn {
+.btn {
   width: 40%;
   margin: 0 30%;
 }
 
-.formClient .btn ~ * {
+.btn ~ * {
   text-align: center;
 }
 
@@ -41,27 +43,30 @@
 }
 
 @media (min-width: 768px) {
-  .formClient {
+  .formClient,
+  .formProvider {
     display: flex;
     flex-flow: column;
   }
 
-  .formClient .inputs {
+  .inputs {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .formClient .form-control,
-  .formClient .form-group:not(:last-child):not(:first-child) {
+  .form-control,
+  .form-group:not(:last-child):not(:first-child) {
     display: flex;
   }
 
-  .formClient .groupName {
+  .formClient .groupName,
+  .formProvider .groupName {
     width: 55%;
     margin-right: 5%;
   }
 
-  .formClient .groupEmail {
+  .formClient .groupEmail,
+  .groupCompanyName {
     width: 40%;
   }
 
@@ -69,23 +74,39 @@
     width: 100%;
   }
 
+  .formProvider .groupAdress {
+    width: 65%;
+    margin-right: 5%;
+  }
+
   .formClient .groupCEP,
-  .formClient .groupCellphone {
+  .formClient .groupCellphone,
+  .formProvider .groupCNPJ,
+  .formProvider .groupCellphone {
     width: 47.5%;
     margin-right: 5%;
   }
 
+  .formProvider .groupCEP {
+    width: 30%;
+  }
+
   .formClient .groupCPF,
-  .formClient .groupPassword {
+  .formClient .groupPassword,
+  .formProvider .groupEmail,
+  .formProvider .groupPassword {
     width: 47.5%;
   }
 }
 
 @media (min-width: 992px) {
+  .formTitle {
+    text-align: left;
+  }
+  
   .formClient .groupAdress {
     width: 65%;
     margin-right: 5%;
-    
   }
 
   .formClient .groupCEP {
@@ -102,7 +123,6 @@
   .formClient .groupPassword {
     width: 25%;
   }
-
 }
 
 @media (min-width: 1200px) {
