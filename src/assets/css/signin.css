@@ -2,6 +2,21 @@
   padding: 5% 10%;
 }
 
+.nav-tabs li {
+  width: 50%;
+  text-align: center;
+}
+
+.nav-tabs li a {
+  width: 100%;
+  border: none;
+}
+
+.nav-tabs li a.active {
+  background-color: blue;
+  color: white;
+}
+
 .formClient,
 .formProvider {
   background-color: #f7f7f7;
@@ -10,10 +25,6 @@
 .formTitle {
   text-align: center;
   font-size: 1rem;
-}
-
-.form-group:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 .form-group input,
