@@ -2,8 +2,8 @@
   padding: 5% 10%;
 }
 
-.formProvider,
-.formClient {
+.signup .formProvider,
+.signup .formClient {
   background-color: #f7f7f7;
   max-width: 600px;
   max-width: 400px;
@@ -12,31 +12,31 @@
 
 
 
-.formTitle {
+.signup .formTitle {
   text-align: center;
   font-size: 1rem;
   padding: 0 10%;
 }
 
-.form-group input,
-.form-group,
-.btn {
+.signup .form-group input,
+.signup .form-group,
+.signup .btn {
   border-radius: 10px;
 }
 
-.btn {
+.signup .btn {
   width: 40%;
   margin: 0 30%;
 }
 
-.btn ~ * {
+.signup .btn ~ * {
   text-align: center;
 }
 
 @media (min-width: 576px) {
-  .form-group input,
-  .form-group,
-  .btn {
+  .signup .form-group input,
+  .signup .form-group,
+  .signup .btn {
     width: 75%;
     margin: 0 12.5% 1rem;
   }
