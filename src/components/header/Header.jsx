@@ -8,8 +8,9 @@ import {
   InputGroup,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "../../assets/css/header.css";
+
 
 const Header = () => {
   return (
@@ -33,7 +34,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Form inline >
-            <InputGroup className="ml-5 ml-md-0 mr-sm-2">
+            <InputGroup className="ml-5 ml-md-0 mr-sm-2 input">
               <FormControl
                 placeholder="Buscar"
                 aria-label="Buscar"
@@ -41,7 +42,7 @@ const Header = () => {
               />
               <InputGroup.Append>
                 <Button className="headerSearchButton">
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  <FontAwesomeIcon icon={faSearch} />
                 </Button>
               </InputGroup.Append>
             </InputGroup>

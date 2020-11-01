@@ -1,17 +1,25 @@
-.headerNavBar{
-    background: linear-gradient(to right,  #3402BB 0%, #1A047D 48.96%, #06054B 100%);
+.headerNavBar {
+    background: linear-gradient(to right, #3402bb 0%, #1a047d 48.96%, #06054b 100%);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-.headerNavLink{
-    color: #FFFFFF!important;
+.headerNavLink {
+    color: #ffffff !important;
 }
 
-.headerNavLink:hover{
-    color: #B33ADD!important;
+.headerNavLink:hover {
+    color: #b33add !important;
     text-decoration: underline;
 }
 
-.headerSearchButton{
-    background-color: #D17894;
+.form-control{
+    border-radius: 10px;
+}
+
+.headerSearchButton {
+    background-color: #d17894;
+}
+
+.fa-search {
+    margin: 0 auto;
 }
