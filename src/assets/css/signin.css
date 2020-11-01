@@ -2,19 +2,26 @@
   padding: 5% 10%;
 }
 
-.nav-tabs li {
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link:hover{
+  border-bottom: none;
+}
+
+#uncontrolled-tab-example-tab-cliente,
+#uncontrolled-tab-example-tab-fornecedor {
   width: 50%;
   text-align: center;
 }
 
-.nav-tabs li a {
-  width: 100%;
-  border: none;
+a[aria-selected] {
+  background-color: #f7f7f7 !important;
 }
 
-.nav-tabs li a.active {
-  background-color: blue;
-  color: white;
+a[aria-selected="true"] {
+  background-color: aqua !important;
 }
 
 .formClient,
@@ -113,7 +120,7 @@
   .formTitle {
     text-align: left;
   }
-  
+
   .formClient .groupAdress {
     width: 65%;
     margin-right: 5%;
