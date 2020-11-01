@@ -1,24 +1,20 @@
 import React from "react";
 import "../../assets/css/signup.css";
-import Form from "react-bootstrap/Form";
-import SignupTitle from "./SignupTitle";
-import SignupFooter from "./SignupFooter";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
+import SignupModel from "./SignupModel";
 
 const Signup = () => {
   return (
     <main className="signup">
-      <Form className="formProvider">
-      <SignupTitle />
-      <section className="inputs">
-        <Form.Group controlId="formBasicEmail" className="groupEmail">
-          <Form.Control type="email" placeholder="Email" required />
-        </Form.Group>
-        <Form.Group controlId="formBasicPassword" className="groupPassword">
-          <Form.Control type="password" placeholder="Senha" required />
-        </Form.Group>
-      </section>
-      <SignupFooter />
-    </Form>
+      <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example"className="d-flex justify-content-center">
+        <Tab eventKey="cliente" title="Cliente">
+          <SignupModel />
+        </Tab>
+        <Tab eventKey="fornecedor" title="Fornecedor">
+          <SignupModel />
+        </Tab>
+      </Tabs>
     </main>
   );
 };

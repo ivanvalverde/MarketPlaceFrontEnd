@@ -2,6 +2,12 @@
   padding: 5% 10%;
 }
 
+.signup #uncontrolled-tab-example-tab-cliente,
+.signup #uncontrolled-tab-example-tab-fornecedor {
+  max-width: 200px;
+  text-align: center;
+}
+
 .signup .formProvider,
 .signup .formClient {
   background-color: #f7f7f7;

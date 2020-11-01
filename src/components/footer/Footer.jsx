@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="container-fluid footer">
       <div className="row ">
-        <div className="col-12 col-md-6 col-lg-4">
+        <div className="col-12 col-sm-6 col-lg-4">
           <lottie-player
             autoplay
             loop
@@ -19,7 +19,7 @@ const Footer = () => {
           ></lottie-player>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-4 d-flex align-items-center text-center pb-5 py-sm-5">
+        <div className="col-12 col-sm-6 col-lg-4 d-flex align-items-center text-center pb-5 py-sm-5">
           <div className="flex-column w-75 mx-auto ">
             <p>Informações</p>
             <p className="footerInfoContato">
