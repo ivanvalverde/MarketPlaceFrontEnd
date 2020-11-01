@@ -5,21 +5,42 @@ import '../../assets/css/home.css';
 
 const Home = () => {
 
-    const oferta = [1,2,3,4]
+    const oferta = [1, 2, 3, 4]
 
     const [dados, setDados] = React.useState([]);
 
-    React.useEffect(()=>{
-        getProduto().then((data)=>{
+    React.useEffect(() => {
+        getProduto().then((data) => {
+
+            /*let costArr = data.results.map((elem, index) => {
+                return {
+                    preco: elem.preco,
+                    index: index
+                }
+            });
+
+            let minCostArr = [];
+
+            for (let i = 0; i < 4; i++) {
+
+                let min = Math.min.apply(Math, costArr.map(function (elem) { return elem.preco; }))
+                
+                let prod = data.results.filter(obj => {
+                    return obj.preco === min
+                  })
+
+                costArr.splice(costArr.findIndex(x => x.preco === min), 1);
+                minCostArr.push(...prod);
+            }*/
 
             setDados(data.results);
         })
 
-        
-    },[]);
 
-       
-        
+    }, []);
+
+
+
     return (
 
         <main className="home">
@@ -40,7 +61,7 @@ const Home = () => {
 
                     {dados.map((elem, index) => {
                         return (
-                            <Card title={elem.nome} text={elem.descricao} img={elem.foto}  key={index} />
+                            <Card title={elem.nome} text={elem.descricao} img={elem.foto} key={index} />
                         )
                     })}
 

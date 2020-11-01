@@ -8,7 +8,7 @@ import Signup from "./components/signup";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
-  
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -16,10 +16,10 @@ function App() {
 
         <Switch>
           <Route path="/cadastro">
-            <Home />
+
           </Route>
           <Route exact path="/">
-            <Signin />
+            <Home />
           </Route>
         </Switch>
 

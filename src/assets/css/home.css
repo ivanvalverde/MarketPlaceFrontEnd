@@ -21,4 +21,5 @@
 
 .homeSectionsDiv{
     margin: 3vh 5vw;
+    overflow-x: scroll;
 }
