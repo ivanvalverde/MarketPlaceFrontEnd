@@ -40,7 +40,7 @@ const Home = () => {
 
                     {dados.map((elem, index) => {
                         return (
-                            <Card  title={elem.nome} text={elem.descricao} img={elem.foto}  key={index} />
+                            <Card title={elem.nome} text={elem.descricao} img={elem.foto}  key={index} />
                         )
                     })}
 
