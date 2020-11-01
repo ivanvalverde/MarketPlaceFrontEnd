@@ -11,11 +11,14 @@ const Home = () => {
 
     React.useEffect(()=>{
         getProduto().then((data)=>{
-            setDados(data);
+
+            setDados(data.results);
         })
+
+        
     },[]);
 
-        console.log(dados)
+       
         
     return (
 

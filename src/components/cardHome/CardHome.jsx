@@ -5,8 +5,8 @@ import '../../assets/css/cardHome.css';
 const CardHome = (props) => {
 
     return (
-        <Card className="cardHome">
-            <Card.Img variant="top" className="cardHomeImg"/>
+        <Card className="cardHome" key={props.key}>
+            <Card.Img variant="top" className="cardHomeImg" src={props.img}/>
             <Card.Body className="cardHomeBody">
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>
