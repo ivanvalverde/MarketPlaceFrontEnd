@@ -1,0 +1,146 @@
+.signin {
+  padding: 5% 10%;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs .nav-link:hover{
+  border-bottom: none;
+}
+
+#uncontrolled-tab-example-tab-cliente,
+#uncontrolled-tab-example-tab-fornecedor {
+  width: 50%;
+  text-align: center;
+}
+
+a[aria-selected] {
+  background-color: #f7f7f7 !important;
+}
+
+a[aria-selected="true"] {
+  background-color: aqua !important;
+}
+
+.formClient,
+.formProvider {
+  background-color: #f7f7f7;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group,
+.btn {
+  border-radius: 10px;
+}
+
+.form-check {
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 40%;
+  margin: 0 30%;
+}
+
+.btn ~ * {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .signin {
+    padding: 8% 13%;
+  }
+}
+
+@media (min-width: 768px) {
+  .formClient,
+  .formProvider {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-control,
+  .form-group:not(:last-child):not(:first-child) {
+    display: flex;
+  }
+
+  .formClient .groupName,
+  .formProvider .groupName {
+    width: 55%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupEmail,
+  .groupCompanyName {
+    width: 40%;
+  }
+
+  .formClient .groupAdress {
+    width: 100%;
+  }
+
+  .formProvider .groupAdress {
+    width: 65%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupCEP,
+  .formClient .groupCellphone,
+  .formProvider .groupCNPJ,
+  .formProvider .groupCellphone {
+    width: 47.5%;
+    margin-right: 5%;
+  }
+
+  .formProvider .groupCEP {
+    width: 30%;
+  }
+
+  .formClient .groupCPF,
+  .formClient .groupPassword,
+  .formProvider .groupEmail,
+  .formProvider .groupPassword {
+    width: 47.5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .formTitle {
+    text-align: left;
+  }
+
+  .formClient .groupAdress {
+    width: 65%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupCEP {
+    width: 30%;
+    margin-right: 0;
+  }
+
+  .formClient .groupCPF,
+  .formClient .groupCellphone {
+    width: 32.5%;
+    margin-right: 5%;
+  }
+
+  .formClient .groupPassword {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+}
