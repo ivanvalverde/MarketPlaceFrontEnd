@@ -3,23 +3,31 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/header/index";
 import Footer from "./components/footer/index";
 import Home from "./components/home/index";
-import Signin from "./components/signin/index";
-import Signup from "./components/signup";
+import Signup from "./components/signin/index";
+import Signin from "./components/signup";
 import React from 'react';
 import getProduto from './api/produto';
+import getCliente from './api/cliente';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Product from "./components/product/index";
 
 function App() {
 
   const [data, setData] = React.useState([]);
+  const [cliente, setCliente] = React.useState([]);
 
   React.useEffect(() => {
 
     getProduto().then((data) => {
       setData(data.results);
     })
+
+    getCliente().then((user) => {
+      setCliente(user);
+    })
+
   }, []);
+
 
   return (
     <div className="App">
@@ -34,15 +42,15 @@ function App() {
 
           </Route>
 
-          <Route path="/signin">
-
-            <Signin />
-
-          </Route>
-
           <Route path="/signup">
 
             <Signup />
+
+          </Route>
+
+          <Route path="/signin">
+
+            <Signin  apiUser={cliente} />
 
           </Route>
 

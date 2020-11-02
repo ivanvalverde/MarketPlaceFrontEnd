@@ -43,10 +43,10 @@ const Header = () => {
               Fornecedores
             </Nav.Link>
             <Nav.Link className="mx-2 headerNavLink">
-              <Link className="linksNav" to='/signin'>Cadastro</Link>
+              <Link className="linksNav" to='/signup'>Cadastro</Link>
             </Nav.Link>
             <Nav.Link className="mx-2 headerNavLink">
-              <Link className="linksNav" to='/signup'>Entre</Link>
+              <Link className="linksNav" to='/signin'>Entre</Link>
             </Nav.Link>
           </Nav>
           <Form inline >
