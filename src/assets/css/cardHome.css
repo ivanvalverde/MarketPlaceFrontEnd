@@ -1,24 +1,10 @@
 .cardHome{
     width: 16rem;
-    background: linear-gradient(180deg, #B33ADD 0%, #D17894 100%);
+    flex-shrink: 0;
+    border: solid 1px #0A1612;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+    color: #1A2930;
 }
-
-.cardHomeImg{
-    width: 90%;
-    height:auto;
-    max-width: 14rem; 
-    max-height:180px;
-    margin: 0 auto;
-    border-radius: 3px;
-    margin-top: 15px;
-    padding-bottom: 15px;
-}
-
 .cardHomeBody{
     background: #FFFFFF;
-    width: 90%;
-    height:auto;
-    margin: 0 auto;
-    border-radius: 3px;
-    margin-bottom: 15px;
 }

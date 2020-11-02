@@ -53,17 +53,21 @@ const Home = () => {
 
             </section>
 
-            <section className="homeSectionsMargin">
+            <section className="py-5 homeCommended">
 
-                <h2 className="homeSectionsH2">Recomendados</h2>
+                <div>
 
-                <div className="d-flex justify-content-between homeSectionsDiv">
+                    <h2 className="homeSectionsH2">Vitrine</h2>
 
-                    {dados.map((elem, index) => {
-                        return (
-                            <Card title={elem.nome} text={elem.descricao} img={elem.foto} key={index} />
-                        )
-                    })}
+                    <div className="d-flex justify-content-between homeSectionsDiv">
+
+                        {dados.map((elem, index) => {
+                            return (
+                                <Card title={elem.nome} text={elem.descricao} img={elem.foto} preco={elem.preco} key={index} fetchId={elem._id}/>
+                            )
+                        })}
+
+                    </div>
 
                 </div>
 
@@ -71,7 +75,7 @@ const Home = () => {
 
             <section className="homeSectionsMargin">
 
-                <h2 className="homeSectionsH2">Fornecedores Populares</h2>
+                <h2 className="homeSectionsH2">Fornecedores</h2>
 
                 <div className="d-flex justify-content-between homeSectionsDiv">
 

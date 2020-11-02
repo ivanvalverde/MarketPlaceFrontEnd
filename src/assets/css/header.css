@@ -1,15 +1,15 @@
 .headerNavBar {
-    background: linear-gradient(304.8deg, #7C63BE 29.5%, #282694 80.89%);
+    background-color: #0A1612;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .headerNavLink {
-    color: #ffffff !important;
+    color: #F7CE3E !important;
+    font-size: 18px;
 }
 
 .headerNavLink:hover {
-    color: #b33add !important;
-    text-decoration: underline;
+    color: #C5C1C0 !important;
 }
 
 .form-control{
@@ -17,7 +17,12 @@
 }
 
 .headerSearchButton {
-    background-color: #d17894;
+    background-color: #F7CE3E;
+    border: none;
+}
+
+.headerSearchButton:hover {
+    background-color: #C5C1C0;
 }
 
 .fa-search {

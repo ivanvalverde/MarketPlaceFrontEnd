@@ -12,7 +12,7 @@ const Footer = () => {
             autoplay
             loop
             mode="normal"
-            src="https://assets5.lottiefiles.com/packages/lf20_hu9cd9.json"
+            src="https://assets9.lottiefiles.com/packages/lf20_wdgehveh.json"
             style={{maxWidth: "70%", margin: "0 auto"}}
             className=""
 

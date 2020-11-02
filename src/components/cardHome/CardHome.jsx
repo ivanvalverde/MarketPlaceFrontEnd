@@ -5,14 +5,19 @@ import '../../assets/css/cardHome.css';
 const CardHome = (props) => {
 
     return (
-        <Card className="cardHome" key={props.key}>
-            <Card.Img variant="top" className="cardHomeImg" src={props.img}/>
+        <Card className="mx-4 cardHome" key={props.key}>
+            <a href={props._id}><Card.Img variant="top" className="cardHomeImg" src={props.img} /></a>
             <Card.Body className="cardHomeBody">
-                <Card.Title>{props.title}</Card.Title>
+
+                <div className="d-flex justify-content-between">
+                    <Card.Title className="cardName">{props.title}</Card.Title>
+                    <Card.Text className="cardPrice">R${props.preco}</Card.Text>
+                </div>
+
                 <Card.Text>
                     {props.text}
-                    {props.preco}
                 </Card.Text>
+
             </Card.Body>
         </Card>
     )
