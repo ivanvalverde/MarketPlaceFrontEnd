@@ -1,5 +1,5 @@
 .footer{
-    background: linear-gradient(to right,  #3402BB 0%, #1A047D 48.96%, #06054B 100%);
+    background: #1A2930;
     font-size: 16px;
     color:white;
     width: 100%;
@@ -13,4 +13,8 @@
 
 .footer p:last-child {
     margin: 0;
+}
+
+.logo{
+    width: 250px;
 }

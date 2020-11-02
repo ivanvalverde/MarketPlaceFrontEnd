@@ -1,7 +1,7 @@
 import React from "react";
 import "../../assets/css/footer.css";
 import "@lottiefiles/lottie-player";
-import img from "../../assets/imgs/logo.svg";
+import Logo from "../../assets/imgs/Logo.png";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
             autoplay
             loop
             mode="normal"
-            src="https://assets5.lottiefiles.com/packages/lf20_hu9cd9.json"
+            src="https://assets9.lottiefiles.com/packages/lf20_wdgehveh.json"
             style={{maxWidth: "70%", margin: "0 auto"}}
             className=""
 
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>  
         <div className="col-12 col-lg-4 d-flex justify-content-center py-5">
-          <img className="logo" src={img} alt="example" />
+          <img className="logo" src={Logo} alt="example" />
         </div>
       </div>
     </footer>

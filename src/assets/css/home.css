@@ -1,24 +1,40 @@
-.homeSectionOne{
-    height: 400px;
-    background-color: #C4C4C4;
+.home{
+    background-color: #C5C1C0;;
 }
 
-.homeSectionTwo{
-    height:150px;
-    background-color: #C4C4C4;
+.homeSectionOne {
+    height: 550px;
+    background-image:url('https://image.freepik.com/vetores-gratis/desenho-de-banner-de-venda-na-sexta-feira-negra-com-carrinho-de-compras_1055-9167.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-bottom: solid 2px #0A1612;
+}
+
+.homeSectionTwo {
+    height: 150px;
+    background-color: #F7CE3E;
+    border: solid 2px #1A2930;
     margin: 5vw;
 }
 
-.homeSectionsMargin{
+.homeCommended {
+    background-color: #F7CE3E;
+    border-top: solid 2px #0A1612;
+    border-bottom: solid 2px #0A1612;
+}
+
+.homeSectionsMargin {
     margin: 12vh 0;
 }
 
-.homeSectionsH2{
-    margin: 6vh 5vw;
-    color: #454545; 
+.homeSectionsH2 {
+    color: #1A2930;
     font-size: 30px;
+    margin: 3vh 5vw;
 }
 
-.homeSectionsDiv{
-    margin: 3vh 5vw;
+.homeSectionsDiv {
+    margin: 5vh 5vw;
+    overflow-x: scroll;
+    background-color: #C5C1C0;
 }

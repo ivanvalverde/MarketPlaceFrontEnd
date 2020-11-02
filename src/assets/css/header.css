@@ -1,15 +1,24 @@
+.linksNav{
+    color: inherit;
+    text-decoration: none;
+}
+
+.headerLogo{
+    width: 150px;
+}
+
 .headerNavBar {
-    background: linear-gradient(to right, #3402bb 0%, #1a047d 48.96%, #06054b 100%);
+    background-color: #0A1612;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .headerNavLink {
-    color: #ffffff !important;
+    color: #F7CE3E !important;
+    font-size: 18px;
 }
 
 .headerNavLink:hover {
-    color: #b33add !important;
-    text-decoration: underline;
+    color: #C5C1C0 !important;
 }
 
 .form-control{
@@ -17,7 +26,22 @@
 }
 
 .headerSearchButton {
-    background-color: #d17894;
+    background-color: #F7CE3E;
+    border: none;
+}
+
+.headerSearchButton:hover {
+    background-color: #C5C1C0;
+}
+
+.linksNav:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
+.headerLogo:hover{
+    transition: 0.1s;
+    filter: invert(77%) sepia(49%) saturate(16%) hue-rotate(325deg) brightness(98%) contrast(76%);
 }
 
 .fa-search {

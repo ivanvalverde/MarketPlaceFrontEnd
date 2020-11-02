@@ -44,7 +44,7 @@ a[aria-selected="true"] {
   font-size: 0.9rem;
 }
 
-.btn {
+.signin .btn {
   width: 40%;
   margin: 0 30%;
 }

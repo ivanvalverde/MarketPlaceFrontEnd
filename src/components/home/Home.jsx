@@ -1,25 +1,11 @@
 import React from 'react';
 import Card from '../cardHome/index';
-import getProduto from '../../api/produto';
 import '../../assets/css/home.css';
 
-const Home = () => {
+const Home = (props) => {
+    
+    const dados = props.apiData;
 
-    const oferta = [1,2,3,4]
-
-    const [dados, setDados] = React.useState([]);
-
-    React.useEffect(()=>{
-        getProduto().then((data)=>{
-
-            setDados(data.results);
-        })
-
-        
-    },[]);
-
-       
-        
     return (
 
         <main className="home">
@@ -30,56 +16,29 @@ const Home = () => {
 
             <section className="homeSectionTwo">
 
+                <p>O Mercadin é um e-commerce, mediado por uma empresa, em que vários lojistas se inscrevem e vendem seus produtos. Essa loja virtual funciona de forma que o cliente pode acessar um site e comprar itens de diferentes varejistas.</p>
+
             </section>
 
-            <section className="homeSectionsMargin">
+            <section className="py-5 homeCommended">
 
-                <h2 className="homeSectionsH2">Recomendados</h2>
+                <div>
 
-                <div className="d-flex justify-content-between homeSectionsDiv">
+                    <h2 className="homeSectionsH2">Vitrine</h2>
 
-                    {dados.map((elem, index) => {
-                        return (
-                            <Card  title={elem.nome} text={elem.descricao} img={elem.foto}  key={index} />
-                        )
-                    })}
+                    <div className="d-flex justify-content-between homeSectionsDiv">
+
+                        {dados.map((elem, index) => {
+                            return (
+                                <Card title={elem.nome} text={elem.descricao} img={elem.foto} preco={elem.preco} key={index} fetchId={elem._id} />
+                            )
+                        })}
+
+                    </div>
 
                 </div>
 
             </section>
-
-            <section className="homeSectionsMargin">
-
-                <h2 className="homeSectionsH2">Fornecedores Populares</h2>
-
-                <div className="d-flex justify-content-between homeSectionsDiv">
-
-                    {oferta.map((elem, index) => {
-                        return (
-                            <Card title={elem} text={elem} key={index} />
-                        )
-                    })}
-
-                </div>
-
-            </section>
-
-            <section className="homeSectionsMargin">
-
-                <h2 className="homeSectionsH2">Clientes Populares</h2>
-
-                <div className="d-flex justify-content-between homeSectionsDiv">
-
-                    {oferta.map((elem, index) => {
-                        return (
-                            <Card title={elem} text={elem} key={index} />
-                        )
-                    })}
-
-                </div>
-
-            </section>
-
 
         </main>
     )
