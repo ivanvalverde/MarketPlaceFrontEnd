@@ -22,19 +22,22 @@ const SigninProvider = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicCEP" className="groupCEP">
-          <Form.Control type="number" placeholder="CEP" required />
+          <Form.Control type="text" placeholder="CEP" pattern="[0-9]{5}-[\d]{3}" title="Formato: 99999-999" required />
         </Form.Group>
 
-        <Form.Group controlId="formBasicCPF" className="groupCNPJ">
-          <Form.Control type="number" placeholder="CNPJ" required />
+        <Form.Group controlId="formBasicCNPJ" className="groupCNPJ">
+          <Form.Control type="text" placeholder="CNPJ"
+            pattern="/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/" title="Formato: 99.999.999/9999-99" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail" className="groupEmail">
-          <Form.Control type="email" placeholder="Email" required />
+          <Form.Control type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Formato: usuario@email.com" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicCellphone" className="groupCellphone">
-          <Form.Control type="number" placeholder="Telefone" required />
+          <Form.Control type="text" placeholder="Telefone" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}"
+            title="Formato: (99) 99999-9999" required />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword" className="groupPassword">

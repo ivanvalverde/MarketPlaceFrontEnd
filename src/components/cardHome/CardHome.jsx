@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import {Link} from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import '../../assets/css/cardHome.css';
 
 const CardHome = (props) => {
 
     return (
-        <Card className="mx-4 cardHome" key={props.key}>
-            <a href={props._id}><Card.Img variant="top" className="cardHomeImg" src={props.img} /></a>
+        <Card className="mx-4 cardHome">
+            <Link to={`/product/${props.fetchId}`}><Card.Img variant="top" className="cardHomeImg" src={props.img} /></Link>
             <Card.Body className="cardHomeBody">
 
                 <div className="d-flex justify-content-between">

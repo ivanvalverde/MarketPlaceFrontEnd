@@ -1,0 +1,22 @@
+.productsDiv{
+    background-color:#F7CE3E;
+}
+
+.productsDisplay{
+    background-color: #FFFFFF;
+}
+
+.productPic{
+    max-width: 32vw;
+    height:auto;
+}
+
+.productPrice{
+    font-size: 18px;
+}
+
+.productInfo{
+    line-height: 0.5;
+    font-size: 12px;
+    color: #C5C1C0;
+}
