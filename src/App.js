@@ -4,26 +4,20 @@ import Header from "./components/header/index";
 import Footer from "./components/footer/index";
 import Home from "./components/home/index";
 import Signup from "./components/signin/index";
-import Signin from "./components/signup";
+import Signin from "./components/signup/index";
 import React from 'react';
-import getProduto from './api/produto';
-import getCliente from './api/cliente';
+import getAll from './api/getAll';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Product from "./components/product/index";
 
 function App() {
 
   const [data, setData] = React.useState([]);
-  const [cliente, setCliente] = React.useState([]);
 
   React.useEffect(() => {
 
-    getProduto().then((data) => {
+    getAll("produto").then((data) => {
       setData(data.results);
-    })
-
-    getCliente().then((user) => {
-      setCliente(user);
     })
 
   }, []);
@@ -50,7 +44,7 @@ function App() {
 
           <Route path="/signin">
 
-            <Signin  apiUser={cliente} />
+            <Signin />
 
           </Route>
 

@@ -1,8 +1,3 @@
-.linksNav{
-    color: inherit;
-    text-decoration: none;
-}
-
 .headerLogo{
     width: 150px;
 }
@@ -15,10 +10,12 @@
 .headerNavLink {
     color: #F7CE3E !important;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .headerNavLink:hover {
     color: #C5C1C0 !important;
+    text-decoration: none;
 }
 
 .form-control{

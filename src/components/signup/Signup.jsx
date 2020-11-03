@@ -4,18 +4,16 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import SignupModel from "./SignupModel";
 
-const Signup = (props) => {
-
-  const users = props.apiUser;
+const Signup = () => {
 
   return (
     <main className="signup">
       <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example"className="d-flex justify-content-center">
         <Tab eventKey="cliente" title="Cliente">
-          <SignupModel client={users.results}/>
+          <SignupModel modelo="cliente"/>
         </Tab>
         <Tab eventKey="fornecedor" title="Fornecedor">
-          <SignupModel />
+          <SignupModel modelo="fornecedor"/>
         </Tab>
       </Tabs>
     </main>

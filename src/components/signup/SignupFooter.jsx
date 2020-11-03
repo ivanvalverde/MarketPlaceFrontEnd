@@ -1,32 +1,37 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import getOneUser from '../../api/getOne';
 import bcrypt from "bcryptjs";
 
 const SigninFooter = (props) => {
 
-  const usuarios = props.cliente;
-  
+  const [cliente, setCliente] = React.useState([]);
+
   const userWritten = props.inputUser;
   const passWritten = props.inputPass;
 
-  const handlePress = (event)=>{
+  const handlePress = (event) => {
     event.preventDefault();
 
-    const cadastro = usuarios.filter(elem => { return elem.senha === bcrypt.hashSync(passWritten, elem.salto)});
-    console.log(cadastro)
+    getOneUser(props.modelo, userWritten).then((user) => {
+      setCliente(user.results);
+      if ((cliente !== []) && (cliente.senha === bcrypt.hashSync(passWritten, cliente.salto))) {
+        console.log("acertou ")
+      }
+    });
   }
 
   return (
-      <Form.Group>
-        <Button onClick={handlePress} variant="primary" type="submit">
-          Login
+    <Form.Group>
+      <Button onClick={handlePress} variant="primary" type="submit">
+        Login
         </Button>
-        <Form.Text muted>Não possui uma conta?</Form.Text>
-        <Form.Text muted>
-          <a href="#Signin">Cadastre-se</a>
-        </Form.Text>
-      </Form.Group>
+      <Form.Text muted>Não possui uma conta?</Form.Text>
+      <Form.Text muted>
+        <a href="#Signin">Cadastre-se</a>
+      </Form.Text>
+    </Form.Group>
   );
 };
 

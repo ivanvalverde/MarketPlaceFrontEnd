@@ -5,8 +5,6 @@ import SignupFooter from "./SignupFooter";
 
 const SignupModel = (props) => {
 
-  const clientes = props.client;
-
   const [usuario, setUsuario] = React.useState("");
   const [senha, setSenha] = React.useState("");
   
@@ -30,7 +28,7 @@ const SignupModel = (props) => {
           <Form.Control onChange={handleFormPass} type="password" placeholder="Senha" required />
         </Form.Group>
       </section>
-      <SignupFooter cliente={clientes} inputUser={usuario} inputPass={senha}/>
+      <SignupFooter inputUser={usuario} inputPass={senha} modelo={props.modelo}/>
     </Form>
   );
 };
