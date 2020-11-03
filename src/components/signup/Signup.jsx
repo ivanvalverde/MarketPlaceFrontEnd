@@ -12,7 +12,7 @@ const Signup = (props) => {
     <main className="signup">
       <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example"className="d-flex justify-content-center">
         <Tab eventKey="cliente" title="Cliente">
-          <SignupModel client={users}/>
+          <SignupModel client={users.results}/>
         </Tab>
         <Tab eventKey="fornecedor" title="Fornecedor">
           <SignupModel />

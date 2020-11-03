@@ -6,9 +6,7 @@ import bcrypt from "bcryptjs";
 const SigninFooter = (props) => {
 
   const usuarios = props.cliente;
-  console.log(usuarios)
   
-  console.log(usuarios);
   const userWritten = props.inputUser;
   const passWritten = props.inputPass;
 
