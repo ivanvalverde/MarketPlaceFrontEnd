@@ -9,7 +9,7 @@ const SigninFooter = () => {
         <Form.Check
           type="checkbox"
           label="Aceito os Termos e condições e autorizo o uso de meus dados de acordo com a Declaração de privacidade."
-        />
+          required />
       </Form.Group>
       <Form.Group>
         <Button variant="primary" type="submit">
