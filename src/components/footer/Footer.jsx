@@ -6,7 +6,7 @@ import Logo from "../../assets/imgs/Logo.png";
 const Footer = () => {
   return (
     <footer className="container-fluid footer">
-      <div className="row ">
+      <div className="row w-100">
         <div className="col-12 col-sm-6 col-lg-4">
           <lottie-player
             autoplay
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>  
         <div className="col-12 col-lg-4 d-flex justify-content-center py-5">
-          <img className="logo" src={Logo} alt="example" />
+          <img className="logo" src={Logo} alt="Logo do site contido no footer." />
         </div>
       </div>
     </footer>

@@ -22,6 +22,7 @@
 
 .headerNavLink:hover {
     color: #C5C1C0 !important;
+    text-decoration: none;
 }
 
 .form-control{

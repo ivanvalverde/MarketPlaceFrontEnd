@@ -3,19 +3,32 @@ import Form from "react-bootstrap/Form";
 import SignupTitle from "./SignupTitle";
 import SignupFooter from "./SignupFooter";
 
-const SignupModel = () => {
+const SignupModel = (props) => {
+
+  const [usuario, setUsuario] = React.useState("");
+  const [senha, setSenha] = React.useState("");
+  
+
+  const handleFormUser = (event)=>{
+    setUsuario(event.target.value);
+  }
+
+  const handleFormPass = (event)=>{
+    setSenha(event.target.value);
+  }
+
   return (
     <Form className="formProvider">
       <SignupTitle />
       <section className="inputs">
         <Form.Group controlId="formBasicEmail" className="groupEmail">
-          <Form.Control type="email" placeholder="Email" required />
+          <Form.Control onChange={handleFormUser} type="email" placeholder="Email" required />
         </Form.Group>
         <Form.Group controlId="formBasicPassword" className="groupPassword">
-          <Form.Control type="password" placeholder="Senha" required />
+          <Form.Control onChange={handleFormPass} type="password" placeholder="Senha" required />
         </Form.Group>
       </section>
-      <SignupFooter />
+      <SignupFooter inputUser={usuario} inputPass={senha} modelo={props.modelo}/>
     </Form>
   );
 };
