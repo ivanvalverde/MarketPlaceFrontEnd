@@ -9,6 +9,8 @@ import React from 'react';
 import getAll from './api/getAll';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Product from "./components/product/index";
+import ProductRegistration from "./components/productRegistration";
+import Confirm from "./components/confirm";
 
 function App() {
 

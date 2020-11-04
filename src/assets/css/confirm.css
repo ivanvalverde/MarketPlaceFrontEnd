@@ -1,0 +1,48 @@
+.confirm {
+  margin: 15% 0;
+}
+.confirm .title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.confirm img {
+  width: 75%;
+}
+
+@media (min-width: 576px) {
+  .confirm .title {
+    font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  }
+
+  .confirm img {
+    width: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .confirm .title {
+    /* font-size: 2rem; */
+  margin-bottom: 2rem;
+  }
+
+  .confirm img {
+    width: 55%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .confirm {
+    margin: 10% 0;
+  }
+  .confirm .title {
+    font-size: 2rem;
+  }
+
+  .confirm img {
+    width: 55%;
+  }
+}
