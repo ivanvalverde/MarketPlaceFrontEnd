@@ -37,7 +37,6 @@ const SigninFooter = (props) => {
       
     }
 
-    console.log(bodyReq)
 
     postUser(bodyReq, props.modelo).then((res) => {
       console.log(res);
