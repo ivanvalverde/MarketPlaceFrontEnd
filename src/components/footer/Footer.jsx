@@ -6,7 +6,7 @@ import Logo from "../../assets/imgs/Logo.png";
 const Footer = () => {
   return (
     <footer className="container-fluid footer">
-      <div className="row ">
+      <div className="row w-100">
         <div className="col-12 col-sm-6 col-lg-4">
           <lottie-player
             autoplay
