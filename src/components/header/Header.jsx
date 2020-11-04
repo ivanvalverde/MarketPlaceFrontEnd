@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import Logo from '../../assets/imgs/Logo.png';
+import Logo from '../../assets/imgs/mercadinBlack.png';
 import "../../assets/css/header.css";
 
 
