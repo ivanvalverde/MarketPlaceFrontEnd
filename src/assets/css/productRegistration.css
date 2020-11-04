@@ -1,0 +1,35 @@
+.prodRegistration {
+  padding: 5% 10%;
+}
+
+.prodRegistration div {
+  background-color: #e7e7e7;
+  padding: 1% 2%;
+}
+
+.prodRegistration button {
+  width: 33% !important;
+}
+
+@media (min-width: 576px) {
+  .groupImage {
+    width: 100%;
+  }
+  .groupNameProduct,
+  .groupDescription,
+  .groupPrice,
+  .groupStock {
+    width: 49.5%;
+  }
+
+  .groupNameProduct,
+  .groupPrice {
+    margin-right: 1%;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
