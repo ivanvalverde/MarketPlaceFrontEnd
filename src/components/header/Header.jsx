@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Navbar,
   Nav,
@@ -12,10 +12,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import Logo from '../../assets/imgs/Logo.png';
 import "../../assets/css/header.css";
+import Auth from '../auth/index';
+import UserContext from '../../userContext';
 
 
 const Header = () => {
 
+
+  const { user } = useContext(UserContext);
   const [id, setID] = React.useState("");
 
   const handleSearch = (event) => {
@@ -32,22 +36,20 @@ const Header = () => {
         <Navbar.Brand href="#home"><img className="headerLogo" src={Logo} alt="Logo do site contido no header."></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto ml-5">
+          <Nav className="mr-auto ml-5 d-flex w-75 justify-content-between">
 
-            <Link className="d-flex align-items-center mx-2 headerNavLink" to='/'>Home</Link>
+            <div className="d-flex">
 
-            <Nav.Link className="mx-2 headerNavLink">
-              Clientes
-            </Nav.Link>
+              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/'>Home</Link>
 
-            <Nav.Link className="mx-2 headerNavLink">
-              Fornecedores
-            </Nav.Link>
+              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signup'>Cadastro</Link>
 
-            <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signup'>Cadastro</Link>
+              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Entre</Link>
 
+            </div>
 
-            <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Entre</Link>
+            {user.auth ? <Auth className="align-self-end w-50"/> : <></>}
+
 
           </Nav>
           <Form inline >

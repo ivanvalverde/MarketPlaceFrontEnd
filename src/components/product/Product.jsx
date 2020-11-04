@@ -41,9 +41,15 @@ const Product = (props) => {
                             <p>{dados.categoria}</p>
                         </div>
 
-                        <div className="d-flex flex-column">
-                            <p className="mb-0 productInfo">Estoque:</p>
-                            <p>{dados.estoque}</p>
+                        <div className="d-flex justify-content-between">
+
+                            <div className="d-flex flex-column">
+                                <p className="mb-0 productInfo">Estoque:</p>
+                                <p>{dados.estoque}</p>
+                            </div>
+
+                            <button>Comprar!</button>
+
                         </div>
 
                     </div>

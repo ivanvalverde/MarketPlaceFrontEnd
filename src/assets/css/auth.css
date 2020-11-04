@@ -1,0 +1,24 @@
+.authText{
+    color:#F7CE3E;
+    margin:0;
+    display: flex;
+    align-self:center;
+    font-size: 18px;
+}
+
+
+.btn-primary{
+    background-color: #F7CE3E!important;
+    color: #0A1612!important;
+    border: none;
+}
+
+btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    background-color: #e3bb2f!important;
+    color: #FFFFFF!important;
+    border: none;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+    background-color: #e3bb2f!important;
+}
