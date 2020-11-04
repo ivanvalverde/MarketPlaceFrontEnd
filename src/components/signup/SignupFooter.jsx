@@ -15,9 +15,13 @@ const SigninFooter = (props) => {
     event.preventDefault();
 
     getOneUser(props.modelo, userWritten).then((user) => {
+      console.log(user.results)
       setCliente(user.results);
-      if ((cliente !== []) && (cliente.senha === bcrypt.hashSync(passWritten, cliente.salto))) {
+      console.log(user.results)
+      if ((cliente !== [])&&(cliente !== null)) {
+        if((cliente.senha === bcrypt.hashSync(passWritten, cliente.salto))){
         console.log("acertou ")
+        }
       }
     });
   }

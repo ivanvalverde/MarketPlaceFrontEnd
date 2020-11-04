@@ -11,10 +11,10 @@ const Signin = () => {
     <main className="signin">
       <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example">
         <Tab eventKey="cliente" title="Cliente">
-          <SigninClient />
+          <SigninClient modelo="cliente"/>
         </Tab>
         <Tab eventKey="fornecedor" title="Fornecedor">
-          <SigninProvider />
+          <SigninProvider modelo="fornecedor"/>
         </Tab>
       </Tabs>
     </main>
