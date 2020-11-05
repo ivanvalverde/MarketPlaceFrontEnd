@@ -3,6 +3,7 @@ import UserContext from '../../userContext';
 import { useHistory } from "react-router-dom";
 import '../../assets/css/auth.css';
 import { Dropdown } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const Auth = () => {
 
@@ -25,7 +26,7 @@ const Auth = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Perfil</Dropdown.Item>
+                    <Dropdown.Item><Link to="/profile" className="profile">Perfil</Link></Dropdown.Item>
                     {user.clien === "cliente" ? <Dropdown.Item href="#/action-2">Compras</Dropdown.Item> : <Dropdown.Item href="#/action-2">Produtos</Dropdown.Item>}
                     <Dropdown.Item onClick={deslogando}>Logout</Dropdown.Item>
                 </Dropdown.Menu>

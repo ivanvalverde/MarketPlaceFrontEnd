@@ -1,0 +1,43 @@
+.profile {
+    padding: 5% 10%;
+  }
+  
+  .profile .formRegister{
+    padding: 1% 2%;
+    background-color: #F7CE3E !important;
+    border-radius: 5px !important;
+  
+  }
+  
+  .profile button {
+    width: 33% !important;
+  }
+  
+  
+  @media (min-width: 576px) {
+    .groupImage {
+      width: 100%;
+    }
+
+    .groupAddress {
+        width: 100%;
+      }
+    .groupNameUser,
+    .groupPhone,
+    .groupCpf,
+    .groupSenha {
+      width: 49.5%;
+    }
+  
+    .groupNameUser,
+    .groupCpf {
+      margin-right: 1%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+  }
+  
+  @media (min-width: 992px) {
+  }
+  
