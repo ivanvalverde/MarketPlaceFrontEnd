@@ -14,20 +14,29 @@ import Logo from '../../assets/imgs/Logo.png';
 import "../../assets/css/header.css";
 import Auth from '../auth/index';
 import UserContext from '../../userContext';
+import getOneProduct from '../../api/getOneProduct';
+import { useHistory } from "react-router-dom";
 
 
 const Header = () => {
 
-
   const { user } = useContext(UserContext);
   const [id, setID] = React.useState("");
+  const history = useHistory();
 
   const handleSearch = (event) => {
     setID(event.target.value);
   }
 
   const handlePress = (event) => {
-    console.log(id);
+    event.preventDefault();
+    getOneProduct(id).then((prod) => {
+      console.log(prod)
+      history.push({
+        pathname: `/many/produto`,
+        state: prod
+      })
+    })
   }
 
   return (
@@ -46,9 +55,11 @@ const Header = () => {
 
               <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Entre</Link>
 
+              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Venda</Link>
+
             </div>
 
-            {user.auth ? <Auth className="align-self-end w-50"/> : <></>}
+            {user.auth ? <Auth className="align-self-end w-50" /> : <></>}
 
 
           </Nav>

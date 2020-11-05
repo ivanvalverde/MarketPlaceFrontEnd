@@ -12,6 +12,8 @@ import Product from "./components/product/index";
 import ProductRegistration from "./components/productRegistration";
 import Confirm from "./components/confirm";
 import UserContext from "./userContext";
+import CardsProd from "./components/cardsProd/index";
+import CardProd from "./components/cardsProd/index";
 
 
 function App() {
@@ -63,6 +65,12 @@ function App() {
           <Route path="/signin">
 
             <Signin />
+
+          </Route>
+
+          <Route path="/many/produto">
+
+          <CardProd />
 
           </Route>
 
