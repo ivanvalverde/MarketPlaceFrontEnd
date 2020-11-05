@@ -20,6 +20,7 @@ import logo from "./assets/imgs/check-mark.svg";
 import OkProd from "./components/confirmProd/index";
 import UpdProfileSucces from './components/confirmUpdate/index';
 import Profile from "./components/profile/index";
+import CompraFeita from "./components/confirmPurchase/index";
 
 
 function App() {
@@ -52,6 +53,12 @@ function App() {
           <Route path="/loggedin">
 
             <Confirm img={logo} />
+
+          </Route>
+
+          <Route path="/comprado">
+
+          <CompraFeita />
 
           </Route>
 

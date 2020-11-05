@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import '../../assets/css/products.css';
 import UserContext from '../../userContext';
 import getProvider from '../../api/getProviderViaId';
@@ -7,6 +7,8 @@ import PostCompra from '../../api/post';
 
 const Product = (props) => {
 
+
+    const history = useHistory();
     const { id } = useParams();
     const data = props.apiData;
     const { user } = useContext(UserContext);
@@ -28,7 +30,7 @@ const Product = (props) => {
         }
 
         PostCompra(body, "compra").then((res)=>{
-            console.log(res);
+            history.push("/comprado");
         })
         
     }
