@@ -17,16 +17,19 @@
 }
 
 a[aria-selected] {
-  background-color: #f7f7f7 !important;
+    background-color: #F7CE3E !important;
+    
 }
 
-a[aria-selected="true"] {
-  background-color: aqua !important;
+a[aria-selected="false"] {
+  background-color: #0a0a0a !important;
+  color: #F7CE3E !important;
 }
 
 .formClient,
 .formProvider {
-  background-color: #f7f7f7;
+  background-color: #F7CE3E !important;
+  padding: 3%;
 }
 
 .formTitle {

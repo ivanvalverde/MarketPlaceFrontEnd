@@ -17,17 +17,13 @@ import Vendas from "./components/productRegistration/index";
 
 
 function App() {
-
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
-
     getAll("produto").then((data) => {
       setData(data.results);
-    })
-
+    });
   }, []);
-
 
   return (
     <div className="App">
@@ -37,11 +33,8 @@ function App() {
         <Header />
 
         <Switch>
-
           <Route exact path="/">
-
             <Home apiData={data} />
-
           </Route>
 
           <Route path="/produto">
@@ -63,15 +56,11 @@ function App() {
           </Route>
 
           <Route path="/signup">
-
             <Signup />
-
           </Route>
 
           <Route path="/signin">
-
             <Signin />
-
           </Route>
 
           <Route path="/many/produto">
@@ -83,9 +72,9 @@ function App() {
           <Route path="/product/:id">
 
             <Product apiData={data} />
-
+    
           </Route>
-
+          
         </Switch>
 
         <Footer />

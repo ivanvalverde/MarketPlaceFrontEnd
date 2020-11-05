@@ -40,7 +40,7 @@ const SigninFooter = (props) => {
       <Button onClick={handlePress} variant="primary" type="submit">
         Login
         </Button>
-      <Form.Text muted>Não possui uma conta?</Form.Text>
+      <Form.Text muted><p className="mb-0 text-dark">Não possui uma conta?</p></Form.Text>
       <Form.Text muted>
         <a href="#Signin">Cadastre-se</a>
       </Form.Text>

@@ -53,43 +53,71 @@ const ProductRegistration = () => {
   }
 
   return (
-    <section className="prodRegistration ">
-      <div className="w-100 mx-auto d-sm-flex flex-sm-wrap">
-        <Form.Group className="groupTitle w-100">
-          <h2 className="formTitle">Insira dados do produto</h2>
-        </Form.Group>
-        <Form.Group
-          controlId="formBasicNameProduct"
-          className="groupNameProduct"
-        >
-          <Form.Control type="text" onChange={alteraNome} placeholder="Nome do produto" required />
-        </Form.Group>
-        <Form.Group
-          controlId="formBasicDescription"
-          className="groupDescription"
-        >
-          <Form.Control type="text" onChange={alteraDescricao} placeholder="Descrição" required />
-        </Form.Group>
-        <Form.Group controlId="formBasicImage" className="groupImage">
-          <Form.Control type="text" onChange={alteraImagem} placeholder="Link da imagem" required />
-        </Form.Group>
-        <Form.Group controlId="formBasicPrice" className="groupPrice">
-          <Form.Control type="number" onChange={alteraPreco} placeholder="Preço" required />
-        </Form.Group>
-        <Form.Group controlId="formBasicStock" className="groupStock">
-          <Form.Control
-            onChange={alteraEstoque}
-            type="text"
-            placeholder="Quantidade do produto"
-            required
-          />
-        </Form.Group>
-        <Form.Group className="d-flex justify-content-center w-100">
-          <Button onClick={handlePress} variant="primary" type="submit">
-            Enviar
-          </Button>
-        </Form.Group>
-      </div>
+    <section className="prodRegistration bg-secondary ">
+        <Form className="d-sm-flex flex-sm-wrap formRegister ">
+          <Form.Group className="groupTitle w-100 rounded">
+            <h2 className="formTitle text-center font-weight-bold">
+              Insira dados do produto
+            </h2>
+          </Form.Group>
+          <Form.Group
+            controlId="formBasicNameProduct"
+            className="groupNameProduct"
+          >
+            <Form.Control
+              onChange={alteraNome}
+              className="border border-dark"
+              type="text"
+              placeholder="Nome do produto"
+              required
+            />
+          </Form.Group>
+          <Form.Group
+            controlId="formBasicDescription"
+            className="groupDescription"
+          >
+            <Form.Control
+              onChange={alteraDescricao}
+              className="border border-dark"
+              type="text"
+              placeholder="Descrição"
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formBasicImage" className="groupImage">
+            <Form.Control
+              onChange={alteraImagem}
+              className="border border-dark"
+              type="text"
+              placeholder="Link da imagem"
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formBasicPrice" className="groupPrice">
+            <Form.Control
+              onChange={alteraPreco}
+              className="border border-dark"
+              type="number"
+              placeholder="Preço"
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formBasicStock" className="groupStock">
+            <Form.Control
+              onChange={alteraEstoque}
+              type="text"
+              className="border border-dark"
+              placeholder="Quantidade do produto"
+              required
+            />
+          </Form.Group>
+          <Form.Group className="d-flex justify-content-center w-100">
+            <Button onClick={handlePress} variant="primary" type="submit">
+              Enviar
+            </Button>
+          </Form.Group>
+        </Form>
+
     </section>
   );
 };
