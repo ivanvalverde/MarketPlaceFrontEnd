@@ -17,6 +17,7 @@ import Vendas from "./components/productRegistration/index";
 import Denied from "./components/denied";
 import img from "./assets/imgs/denied.svg";
 import logo from "./assets/imgs/check-mark.svg";
+import Profile from "./components/profile";
 
 
 function App() {
@@ -83,7 +84,13 @@ function App() {
             <Denied img={img}/>
 
           </Route>
-          
+
+          <Route path="/profile">
+
+            <Profile />
+
+          </Route>
+
         </Switch>
 
         <Footer />
