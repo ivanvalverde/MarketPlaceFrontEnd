@@ -16,7 +16,9 @@ const Home = (props) => {
 
             <section className="homeSectionTwo">
 
-                <p>O Mercadin é um e-commerce, mediado por uma empresa, em que vários lojistas se inscrevem e vendem seus produtos. Essa loja virtual funciona de forma que o cliente pode acessar um site e comprar itens de diferentes varejistas.</p>
+                <p>O Mercadin é um shopping virtual que reúne vários compradores e vendedores em um só lugar.<br />
+                Aqui você vai encontrar tudo que procura para comprar ou se quiser vender, é só cadatrar seus produtos e anunciar!<br />
+                Vamos às compras? Aqui no Mercadin seu carrinho nunca fica vazio!</p>
 
             </section>
 

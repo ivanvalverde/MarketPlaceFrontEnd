@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 .home{
-    background-color: #C5C1C0;;
+    background-color: #0c1a15;;
 }
 
 .homeSectionOne {
@@ -12,9 +13,12 @@
 
 .homeSectionTwo {
     height: 150px;
-    background-color: #F7CE3E;
-    border: solid 2px #1A2930;
+    background-color: #0c1a15;
     margin: 5vw;
+    font-family: 'Lilita One', cursive;
+    font-size: 24px;
+    text-align: center;
+    color: white;
 }
 
 .homeCommended {

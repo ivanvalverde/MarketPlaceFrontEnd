@@ -1,20 +1,24 @@
-.footer{
-    background: #1A2930;
+.footer {
+    background-color: #0A1612;
     font-size: 16px;
-    color:white;
-    width: 100%;
-    padding: 2% 2%;
+    color: white;
+    padding: 10px 0 25px;
 }
 
-.footerInfoContato{
+.footerInfoContato {
     border-bottom: dotted 2px #FFFFFF;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.copyright {
+    color: #F7CE3E;
 }
 
 .footer p:last-child {
     margin: 0;
 }
 
-.logo{
-    width: 250px;
+.logo {
+    width: 100px;
+    height: 100px;
 }
