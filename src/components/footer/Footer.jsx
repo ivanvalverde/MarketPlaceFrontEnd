@@ -6,7 +6,7 @@ import Logo from "../../assets/imgs/mercadinBlack.png";
 const Footer = () => {
   return (
     <footer className="container-fluid footer">
-      <div className="row">
+      <div className="row w-100">
         <div className="col-12 text-center">
           <img className="logo mx-auto d-block" src={Logo} alt="Logo do site contido no footer." />
           <p>Pague com cartão de crédito ou boleto.<br />
