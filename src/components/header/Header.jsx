@@ -50,10 +50,12 @@ const Header = () => {
             <div className="d-flex">
 
               <Link className="d-flex align-items-center mx-2 headerNavLink" to='/'>Home</Link>
-
-              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signup'>Cadastro</Link>
-
-              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Entre</Link>
+              {user.clien === "" ?<Link className="d-flex align-items-center mx-2 headerNavLink" to='/signup'>Cadastro</Link>:
+              <></>}
+              
+              {user.clien === "" ?<Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Entre</Link>:
+              <></>}
+              
 
               {user.clien==="fornecedor"?<Link className="d-flex align-items-center mx-2 headerNavLink" to='/registrar/produto'>Venda</Link>:
               <></>}

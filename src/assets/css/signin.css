@@ -2,8 +2,9 @@
   padding: 5% 10%;
 }
 
-.nav-tabs {
+.nav-tabs{
   border-bottom: none;
+  border-color: none;
 }
 
 .nav-tabs .nav-link:hover{
