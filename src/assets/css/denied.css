@@ -1,43 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
-.confirm {
+.denied {
   padding: 15% 0;
 }
-.confirm .title {
+.denied .title {
   font-size: 1.4rem;
   margin-bottom: 1rem;
   font-family: "Lilita One", cursive;
   color: #ddd;
-
 }
 
-.confirm img {
-  width: 50%;
+.denied img {
+  width: 60%;
 }
 
 @media (min-width: 576px) {
-  .confirm .title {
+  .denied .title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .confirm .title {
+  .denied .title {
     /* font-size: 2rem; */
     margin-bottom: 2rem;
   }
 }
 
 @media (min-width: 992px) {
-  .confirm {
+  .denied {
     padding: 10% 0;
   }
-  .confirm .title {
+  .denied .title {
     font-size: 2rem;
   }
 
-  .confirm img {
-    width: 35%;
+  .denied img {
+    width: 40%;
   }
 }

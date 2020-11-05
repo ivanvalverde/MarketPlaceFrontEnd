@@ -15,7 +15,7 @@ import UserContext from "./userContext";
 import CardProd from "./components/cardsProd/index";
 import Vendas from "./components/productRegistration/index";
 import Denied from "./components/denied";
-
+import img from "./assets/imgs/denied.svg";
 
 function App() {
   const [data, setData] = React.useState([]);
@@ -78,7 +78,7 @@ function App() {
 
           <Route path="/denied">
 
-            <Denied />
+            <Denied img={img}/>
 
           </Route>
           
