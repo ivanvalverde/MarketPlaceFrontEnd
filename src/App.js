@@ -17,6 +17,9 @@ import Vendas from "./components/productRegistration/index";
 import Denied from "./components/denied";
 import img from "./assets/imgs/denied.svg";
 import logo from "./assets/imgs/check-mark.svg";
+import OkProd from "./components/confirmProd/index";
+import profile from './components/profile/index';
+import Profile from "./components/profile/index";
 
 
 function App() {
@@ -58,6 +61,12 @@ function App() {
 
           </Route>
 
+          <Route path="/profile">
+
+            <Profile />
+
+          </Route>
+
           <Route path="/signup">
             <Signup />
           </Route>
@@ -75,15 +84,21 @@ function App() {
           <Route path="/product/:id">
 
             <Product apiData={data} />
-    
+
+          </Route>
+
+          <Route path="/vender/sucesso">
+
+            <OkProd />
+
           </Route>
 
           <Route path="/denied">
 
-            <Denied img={img}/>
+            <Denied img={img} />
 
           </Route>
-          
+
         </Switch>
 
         <Footer />

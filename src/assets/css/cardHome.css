@@ -5,6 +5,11 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
     color: #1A2930;
 }
+
+.cardHomeImg{
+    max-height: 10rem;
+}
+
 .cardHomeBody{
     background: #FFFFFF;
 }
