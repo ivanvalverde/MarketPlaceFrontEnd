@@ -2,12 +2,36 @@ import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../assets/css/products.css';
 import UserContext from '../../userContext';
+import getProvider from '../../api/getProviderViaId';
+import PostCompra from '../../api/post';
 
 const Product = (props) => {
 
     const { id } = useParams();
     const data = props.apiData;
     const { user } = useContext(UserContext);
+    const [forn, setForn] = React.useState("");
+
+    React.useEffect(() => {
+
+        getProvider(data.filter(elem => elem._id === id).map((dados) =>  dados.fornecedor)[0]).then((data) => {
+            setForn(data.results.nome);
+        });
+    }, [data]);
+
+    const handlePress = (event) =>{
+        event.preventDefault();
+
+        const body={
+            idProduto: data.filter(elem => elem._id === id).map((dados) =>  dados._id)[0],
+            idCliente: user.id
+        }
+
+        PostCompra(body, "compra").then((res)=>{
+            console.log(res);
+        })
+        
+    }
 
     return (
         <div className="py-5 productsDiv">
@@ -25,7 +49,7 @@ const Product = (props) => {
 
                         <div className="d-flex flex-column">
                             <p className="mb-0 productInfo">Fornecedor:</p>
-                            <p>{dados.fornecedor}</p>
+                            <p>{forn}</p>
                         </div>
 
                         <div className="d-flex flex-column">
@@ -50,7 +74,7 @@ const Product = (props) => {
                                 <p>{dados.estoque}</p>
                             </div>
 
-                            {user.auth?<button>Comprar!</button>:<></>}
+                            {user.auth ? <button onClick={handlePress}>Comprar!</button> : <></>}
 
                         </div>
 
