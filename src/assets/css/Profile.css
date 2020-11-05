@@ -1,3 +1,12 @@
+.profileSection{
+    display: flex;
+    background-color: #6c757d!important;
+}
+
+.fotoProfile{
+    max-width: 30vw;
+}
+
 .profile {
     padding: 5% 10%;
   }
@@ -12,6 +21,10 @@
   .profile button {
     width: 33% !important;
   }
+
+  .sendButton{
+      background-color: #6c757d!important;
+  }
   
   
   @media (min-width: 576px) {
@@ -25,12 +38,14 @@
     .groupNameUser,
     .groupPhone,
     .groupCpf,
-    .groupSenha {
+    .groupSenha,
+    .groupRazaoSocial{
       width: 49.5%;
     }
   
     .groupNameUser,
-    .groupCpf {
+    .groupCpf,
+    .groupCnpj{
       margin-right: 1%;
     }
   }
