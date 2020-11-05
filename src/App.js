@@ -16,6 +16,8 @@ import CardProd from "./components/cardsProd/index";
 import Vendas from "./components/productRegistration/index";
 import Denied from "./components/denied";
 import img from "./assets/imgs/denied.svg";
+import logo from "./assets/imgs/check-mark.svg";
+
 
 function App() {
   const [data, setData] = React.useState([]);
@@ -46,7 +48,7 @@ function App() {
 
           <Route path="/loggedin">
 
-            <Confirm />
+            <Confirm img={logo} />
 
           </Route>
 
