@@ -6,7 +6,7 @@ import '../../assets/css/cardHome.css';
 const CardHome = (props) => {
 
     return (
-        <Card className="mx-4 cardHome">
+        <Card className="mx-4 my-4 cardHome">
             <Link to={`/product/${props.fetchId}`}><Card.Img variant="top" className="cardHomeImg" src={props.img} /></Link>
             <Card.Body className="cardHomeBody">
 

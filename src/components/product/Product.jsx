@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../assets/css/products.css';
+import UserContext from '../../userContext';
 
 const Product = (props) => {
 
     const { id } = useParams();
     const data = props.apiData;
+    const { user } = useContext(UserContext);
 
     return (
         <div className="py-5 productsDiv">
@@ -41,9 +43,15 @@ const Product = (props) => {
                             <p>{dados.categoria}</p>
                         </div>
 
-                        <div className="d-flex flex-column">
-                            <p className="mb-0 productInfo">Estoque:</p>
-                            <p>{dados.estoque}</p>
+                        <div className="d-flex justify-content-between">
+
+                            <div className="d-flex flex-column">
+                                <p className="mb-0 productInfo">Estoque:</p>
+                                <p>{dados.estoque}</p>
+                            </div>
+
+                            {user.auth?<button>Comprar!</button>:<></>}
+
                         </div>
 
                     </div>

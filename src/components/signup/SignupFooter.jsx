@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import getOneUser from '../../api/getOne';
 import bcrypt from "bcryptjs";
+import { useHistory } from "react-router-dom";
+import UserContext from '../../userContext';
 
 const SigninFooter = (props) => {
 
-  const [cliente, setCliente] = React.useState([]);
-
   const userWritten = props.inputUser;
   const passWritten = props.inputPass;
+  const history = useHistory();
+  const { login } = useContext(UserContext);
+
 
   const handlePress = (event) => {
     event.preventDefault();
 
-    getOneUser(props.modelo, userWritten).then((user) => {
-      console.log(user.results)
-      setCliente(user.results);
-      console.log(user.results)
-      if ((cliente !== [])&&(cliente !== null)) {
-        if((cliente.senha === bcrypt.hashSync(passWritten, cliente.salto))){
-        console.log("acertou ")
+    getOneUser(props.modelo, userWritten).then((users) => {
+
+      if ((users.results !== []) && (users.results !== null)) {
+        if ((users.results.senha === bcrypt.hashSync(passWritten, users.results.salto))) {
+
+          if (props.modelo === "cliente") {
+            login(users.results.nome, users.results._id, props.modelo, users.results.email, users.results.telefone,
+              users.results.endereco, users.results.cpf, users.results.foto)
+          } else{
+            login(users.results.nome, users.results._id, props.modelo, users.results.email, users.results.telefone,
+              users.results.endereco, '', users.results.foto, users.results.razaoSocial, users.results.cnpj)
+          }
+          history.push("/loggedin");
         }
       }
     });

@@ -5,12 +5,16 @@ import Footer from "./components/footer/index";
 import Home from "./components/home/index";
 import Signup from "./components/signin/index";
 import Signin from "./components/signup/index";
-import React from "react";
-import getAll from "./api/getAll";
+import React, { useContext } from 'react';
+import getAll from './api/getAll';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Product from "./components/product/index";
 import ProductRegistration from "./components/productRegistration";
 import Confirm from "./components/confirm";
+import UserContext from "./userContext";
+import CardProd from "./components/cardsProd/index";
+import Vendas from "./components/productRegistration/index";
+
 
 function App() {
   const [data, setData] = React.useState([]);
@@ -24,11 +28,31 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
+
         <Header />
 
         <Switch>
           <Route exact path="/">
             <Home apiData={data} />
+          </Route>
+
+          <Route path="/produto">
+
+            <ProductRegistration />
+
+          </Route>
+
+          <Route path="/loggedin">
+
+            <Confirm />
+
+          </Route>
+
+          <Route path="/registrar/produto">
+
+            <Vendas />
+
           </Route>
 
           <Route path="/signup">
@@ -39,16 +63,25 @@ function App() {
             <Signin />
           </Route>
 
+          <Route path="/many/produto">
+
+            <CardProd />
+
+          </Route>
+
           <Route path="/product/:id">
+
             <Product apiData={data} />
+    
           </Route>
-          <Route path="/products">
-            <ProductRegistration />
-          </Route>
+          
         </Switch>
 
         <Footer />
+
+
       </BrowserRouter>
+
     </div>
   );
 }
