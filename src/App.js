@@ -14,6 +14,7 @@ import Confirm from "./components/confirm";
 import UserContext from "./userContext";
 import CardProd from "./components/cardsProd/index";
 import Vendas from "./components/productRegistration/index";
+import Denied from "./components/denied";
 
 
 function App() {
@@ -73,6 +74,12 @@ function App() {
 
             <Product apiData={data} />
     
+          </Route>
+
+          <Route path="/denied">
+
+            <Denied />
+
           </Route>
           
         </Switch>
