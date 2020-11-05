@@ -10,13 +10,11 @@
 
 .signup .formProvider,
 .signup .formClient {
-  background-color: #f7f7f7;
+  background-color: #f7ce3e !important;
   max-width: 600px;
   max-width: 400px;
   margin: 0 auto;
 }
-
-
 
 .signup .formTitle {
   text-align: center;
