@@ -18,7 +18,7 @@ import Denied from "./components/denied";
 import img from "./assets/imgs/denied.svg";
 import logo from "./assets/imgs/check-mark.svg";
 import OkProd from "./components/confirmProd/index";
-import profile from './components/profile/index';
+import UpdProfileSucces from './components/confirmUpdate/index';
 import Profile from "./components/profile/index";
 
 
@@ -78,6 +78,12 @@ function App() {
           <Route path="/many/produto">
 
             <CardProd />
+
+          </Route>
+
+          <Route path="/sucesso">
+
+            <UpdProfileSucces />
 
           </Route>
 
