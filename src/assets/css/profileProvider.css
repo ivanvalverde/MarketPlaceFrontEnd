@@ -1,0 +1,24 @@
+.profileProvider {
+  padding: 15% 10%;
+}
+
+.profileProvider form {
+  padding: 5% 2.5%;
+  background-color: #F7CE3E !important;
+}
+
+.profileProvider h2 {
+  font-size: 1.5rem;
+}
+
+.profileProvider img {
+  width: 50%;
+  height: 50%;  
+}
+
+@media (min-width: 576px) {
+  .profileProvider img {
+    width: auto;
+    height: auto;  
+  }
+}

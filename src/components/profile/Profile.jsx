@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 const Profile = (props) => {
   return (
     <main className="d-flex justify-content-center align-items-center bg-secondary profile">
-      <Form className="formProfile rounded">
+      <Form className="formProfile rounded w-100">
         <Form.Group controlId="formProfileTitle" className="groupTitle">
           <h2 className="text-center">Seus dados</h2>
         </Form.Group>
@@ -14,7 +14,7 @@ const Profile = (props) => {
         <Form.Group
           controlId="formProfileLogo"
           className="groupLogo d-flex justify-content-center align-items-center"
-        ><img src={props.img?props.img:img} alt="profile" className="w-50 h-50"/></Form.Group>
+        ><img src={props.img?props.img:img} alt="profile" className="w-50 h-50 rounded-circle"/></Form.Group>
 
         <Form.Group controlId="formProfileNameClient" className="groupName">
           <Form.Control

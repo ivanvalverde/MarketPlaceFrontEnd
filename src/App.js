@@ -18,6 +18,7 @@ import Denied from "./components/denied";
 import img from "./assets/imgs/denied.svg";
 import logo from "./assets/imgs/check-mark.svg";
 import Profile from "./components/profile";
+import ProfileProvider from "./components/profileProvider";
 
 
 function App() {
@@ -85,9 +86,15 @@ function App() {
 
           </Route>
 
-          <Route path="/profile">
+          <Route path="/profileClient">
 
             <Profile />
+
+          </Route>
+
+          <Route path="/profileProvider">
+
+            <ProfileProvider />
 
           </Route>
 
