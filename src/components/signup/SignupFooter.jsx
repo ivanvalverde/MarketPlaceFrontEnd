@@ -14,7 +14,6 @@ const SigninFooter = (props) => {
   const { login } = useContext(UserContext);
 
 
-
   const handlePress = (event) => {
     event.preventDefault();
 
@@ -22,7 +21,14 @@ const SigninFooter = (props) => {
 
       if ((users.results !== []) && (users.results !== null)) {
         if ((users.results.senha === bcrypt.hashSync(passWritten, users.results.salto))) {
-          login(users.results.nome)
+
+          if (props.modelo === "cliente") {
+            login(users.results.nome, users.results._id, props.modelo, users.results.email, users.results.telefone,
+              users.results.endereco, users.results.cpf, users.results.foto)
+          } else{
+            login(users.results.nome, users.results._id, props.modelo, users.results.email, users.results.telefone,
+              users.results.endereco, '', users.results.foto, users.results.razaoSocial, users.results.cnpj)
+          }
           history.push("/loggedin");
         }
       }

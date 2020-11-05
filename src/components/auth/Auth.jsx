@@ -26,7 +26,7 @@ const Auth = () => {
 
                 <Dropdown.Menu>
                     <Dropdown.Item href="#/action-1">Perfil</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Compras</Dropdown.Item>
+                    {user.clien === "cliente" ? <Dropdown.Item href="#/action-2">Compras</Dropdown.Item> : <Dropdown.Item href="#/action-2">Produtos</Dropdown.Item>}
                     <Dropdown.Item onClick={deslogando}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

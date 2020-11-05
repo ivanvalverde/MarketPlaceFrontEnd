@@ -55,7 +55,8 @@ const Header = () => {
 
               <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Entre</Link>
 
-              <Link className="d-flex align-items-center mx-2 headerNavLink" to='/signin'>Venda</Link>
+              {user.clien==="fornecedor"?<Link className="d-flex align-items-center mx-2 headerNavLink" to='/registrar/produto'>Venda</Link>:
+              <></>}
 
             </div>
 

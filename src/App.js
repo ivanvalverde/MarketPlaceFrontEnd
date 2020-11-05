@@ -5,15 +5,15 @@ import Footer from "./components/footer/index";
 import Home from "./components/home/index";
 import Signup from "./components/signin/index";
 import Signin from "./components/signup/index";
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import getAll from './api/getAll';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Product from "./components/product/index";
 import ProductRegistration from "./components/productRegistration";
 import Confirm from "./components/confirm";
 import UserContext from "./userContext";
-import CardsProd from "./components/cardsProd/index";
 import CardProd from "./components/cardsProd/index";
+import Vendas from "./components/productRegistration/index";
 
 
 function App() {
@@ -56,6 +56,12 @@ function App() {
 
           </Route>
 
+          <Route path="/registrar/produto">
+
+            <Vendas />
+
+          </Route>
+
           <Route path="/signup">
 
             <Signup />
@@ -70,7 +76,7 @@ function App() {
 
           <Route path="/many/produto">
 
-          <CardProd />
+            <CardProd />
 
           </Route>
 
