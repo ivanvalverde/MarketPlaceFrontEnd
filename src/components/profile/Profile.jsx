@@ -1,10 +1,21 @@
 import React from "react";
+import "../../assets/css/profile.css";
+import img from "../../assets/imgs/user.svg";
 import Form from "react-bootstrap/Form";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
-    <main className="profile bg-secondary d-flex justify-content-center align-items-center">
+    <main className="d-flex justify-content-center align-items-center bg-secondary profile">
       <Form className="formProfile rounded">
+        <Form.Group controlId="formProfileTitle" className="groupTitle">
+          <h2 className="text-center">Seus dados</h2>
+        </Form.Group>
+
+        <Form.Group
+          controlId="formProfileLogo"
+          className="groupLogo d-flex justify-content-center align-items-center"
+        ><img src={props.img?props.img:img} alt="profile" className="w-50 h-50"/></Form.Group>
+
         <Form.Group controlId="formProfileNameClient" className="groupName">
           <Form.Control
             className="border border-dark"

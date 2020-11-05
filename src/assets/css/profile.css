@@ -1,0 +1,18 @@
+.profile {
+  padding: 15% 10%;
+}
+
+.profile form {
+  padding: 5% 2.5%;
+  background-color: #F7CE3E !important;
+}
+
+.profile h2 {
+  font-size: 1.5rem;
+}
+
+.profile img {
+  width: 50%;
+  height: 50%;
+  
+}
