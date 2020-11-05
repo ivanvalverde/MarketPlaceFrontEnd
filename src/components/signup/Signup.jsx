@@ -7,8 +7,8 @@ import SignupModel from "./SignupModel";
 const Signup = () => {
 
   return (
-    <main className="signup">
-      <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example"className="d-flex justify-content-center">
+    <main className="signup bg-secondary">
+      <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example"className="d-flex justify-content-center font-weight-bold text-dark">
         <Tab eventKey="cliente" title="Cliente">
           <SignupModel modelo="cliente"/>
         </Tab>

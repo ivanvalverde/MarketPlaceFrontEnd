@@ -8,12 +8,12 @@ import Tab from "react-bootstrap/Tab";
 const Signin = () => {
 
   return (
-    <main className="signin">
-      <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example">
-        <Tab eventKey="cliente" title="Cliente">
+    <main className="signin bg-secondary">
+      <Tabs defaultActiveKey="cliente" id="uncontrolled-tab-example" className="font-weight-bold text-dark" >
+        <Tab eventKey="cliente" title="Cliente" >
           <SigninClient modelo="cliente"/>
         </Tab>
-        <Tab eventKey="fornecedor" title="Fornecedor">
+        <Tab eventKey="fornecedor" title="Fornecedor" >
           <SigninProvider modelo="fornecedor"/>
         </Tab>
       </Tabs>

@@ -18,7 +18,7 @@ const SignupModel = (props) => {
   }
 
   return (
-    <Form className="formProvider">
+    <Form className="formProvider rounded">
       <SignupTitle />
       <section className="inputs">
         <Form.Group controlId="formBasicEmail" className="groupEmail">
