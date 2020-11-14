@@ -2,9 +2,11 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import postUser from "../../api/post";
+import {useHistory} from 'react-router-dom';
 
 const SigninFooter = (props) => {
   const [bodyReq, setBodyReq] = React.useState({});
+  const history = useHistory();
 
   const handlePress = (event) => {
     event.preventDefault();
@@ -37,7 +39,7 @@ const SigninFooter = (props) => {
     }
 
     postUser(bodyReq, props.modelo).then((res) => {
-      console.log(res);
+      history.push('/comprado');
     });
   };
 

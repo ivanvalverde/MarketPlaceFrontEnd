@@ -7,7 +7,7 @@ const Confirm = () => {
   return (
     <main className="confirm d-flex justify-content-center align-items-center bg-secondary">
       <section className="w-50 ">
-        <h2 className="title text-center">Compra realizada com sucesso!</h2>
+        <h2 className="title text-center">Realizado com sucesso!</h2>
         <figure className="d-flex justify-content-center flex-column align-items-center">
           <img src={img} alt="check" className=""/>
         </figure>
